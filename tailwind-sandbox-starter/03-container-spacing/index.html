@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- Container -->
-    <div>
+    <div class="container mx-auto">
       <article>
         <h3>Article One</h3>
         <p>
@@ -21,23 +21,51 @@
       </article>
 
       <!-- Margin -->
-
+      <div class="bg-slate-100 m-2">margin-all</div>
+      <div class="bg-slate-100 ml-4">margin-left</div>
+      <div class="bg-slate-100 mr-4">margin-right</div>
+      <div class="bg-slate-100 mt-4">margin-Top</div>
+      <div class="bg-slate-100 mb-5">margin-right</div>
+      <div class="bg-slate-100 mt-[20px]">margin-right</div>
       <!-- Padding -->
-
+      <div class="bg-red-100 p-4">padding-all</div>
+      <div class="bg-yellow-100 pl-20">padding-left</div>
+      <div class="bg-red-100 pr-2">padding-right</div>
+      <div class="bg-slate-100 pt-4">padding-Top</div>
+      <div class="bg-slate-100 pb-5">padding-right</div>
+      <div class="bg-slate-100 pt-[20px]">margin-right</div>
       <!-- Space Between X -->
+      <div class="flex mt-24 space-x-10 bg-slate-100">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+        <div>item5</div>
+        <div>item6</div>
+        <div>item7</div>
+      </div>
+      <div class="flex flex-col mt-24 space-y-4 bg-cyan-500">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+        <div>item5</div>
+        <div>item6</div>
+        <div>item7</div>
+      </div>
 
       <!-- Space Between Y -->
     </div>
   </body>
 </html>
 
-<!-- Breakpoinsts for Container 
+<!-- Breakpoinsts for Container
     container	None	width: 100%;
     sm (640px)	    max-width: 640px;
     md (768px)	    max-width: 768px;
     lg (1024px)	    max-width: 1024px;
     xl (1280px)	    max-width: 1280px;
-    2xl (1536px)	  max-width: 1536px; 
+    2xl (1536px)	  max-width: 1536px;
 -->
 
 <!-- Margin Values
@@ -364,7 +392,7 @@
       mt-auto	margin-top: auto;
       mr-auto	margin-right: auto;
       mb-auto	margin-bottom: auto;
-      ml-auto	margin-left: auto; 
+      ml-auto	margin-left: auto;
     -->
 
 <!-- Padding Values
