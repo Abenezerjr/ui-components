@@ -2,11 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1 class="h-64">Im back</h1>
+    <!---- Global contanier-->
+    <div class="flex items-center justify-center min-h-screen bg-cyan-50">
+      <!---cared Container-->
+      <div class="bg-white p-6 m-3 space-y-10 shadow-2xl rounded-3xl md:p-40">
+        <!--Menu Container-->
+        <div
+          class="flex flex-row items-center justify-center space-y-0 space-x-4 md:flex-row md:space-y-0 md:space-x-8 md:mb-24 md:justify-end"
+        >
+          <!--Menu item-->
+          <div class="group">
+            <a href="#">Vactor</a>
+            <div
+              class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"
+            ></div>
+          </div>
+          <div class="group">
+            <a href="#">Illustarations</a>
+            <div
+              class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"
+            ></div>
+          </div>
+          <div class="group">
+            <a href="#">Images</a>
+            <div
+              class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"
+            ></div>
+          </div>
+          <div class="group">
+            <a href="#">Icons</a>
+            <div
+              class="mx-2 mt-2 duration-500 border-b-2 opacity-0 border-black group-hover:opacity-100"
+            ></div>
+          </div>
+        </div>
+        <!-- Seach Content-->
+        <div
+          class="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-y-4"
+        >
+          <!--Input and  SVG Container-->
+          <div class="flex justify-between border-b">
+            <input
+              type="text"
+              class="ml-6 border-none md:w-80 placeholder:font-thin focus:outline-none"
+              placeholder="Search"
+            />
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 text-gray-300 duration-200 hover:scale-110"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="py-3 px-14 text-ig font-normal text-white bg-black border border-black rounded-md shadow-2xl duration-200 hover:bg-white hover:text-black"
+          >
+            upload
+          </button>
+        </div>
+        <!---Gallery container-->
+      </div>
+    </div>
   </body>
 </html>
