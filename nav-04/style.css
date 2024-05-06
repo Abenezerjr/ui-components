@@ -99,10 +99,6 @@ html {
   text-decoration: none;
   transition: all 0.2s;
   font-weight: 600;
-  /*only necessary for .btn*/
-  /*border: none;*/
-  /*cursor: pointer;*/
-  /*font-family: inherit;*/
 }
 .btn--form:hover {
   background-color: white;
@@ -118,10 +114,8 @@ html {
 }
 .btn--full:link,
 .btn--full:visited {
-  /*background-color:#6ff668 ;*/
   background-color: #fbdb65;
   color: #000000;
-  /*margin-left: 1.6rem;*/
 }
 
 .btn--full:hover,
@@ -134,24 +128,21 @@ html {
 .btn--outline:visited {
   background-color: #ffffff;
   color: black;
-  /*margin-left: 1.6rem;*/
 }
 
 .btn--outline:hover,
 .btn--outline:active {
   background-color: #555555;
-  /*color: white;*/
 }
 .link:link {
   display: inline;
-  /*color: #6ff668;*/
+
   text-decoration: none;
   border-bottom: 1px dotted currentColor;
   padding-bottom: 2px;
   transition: all 0.3s;
 }
 .a {
-  /*color: #4eac49;*/
   color: #fbdb65;
 }
 .link:hover,
@@ -160,7 +151,6 @@ html {
   border-bottom: 1px solid transparent;
 }
 
-/* Below 1344px(smaller desktop)*/
 @media (max-width: 59em) {
   html {
     font-size: 50%;
@@ -189,10 +179,6 @@ html {
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-out;
-    /*hide the navigation*/
-    /*allows no transition at all*/
-    /*display: none;*/
-    /* 1 hide it visually*/
     opacity: 0;
     /* Make it inaccessible to the mouse and keyboard*/
     pointer-events: none;
