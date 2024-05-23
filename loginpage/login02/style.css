@@ -1,12 +1,15 @@
 :root {
-  --primary: #5138ee;
-  --primary-disabled: #9383f5;
-  --primary-lighter: #806df3;
-  --secondary: #d4d7de;
-  --text: #17222a;
+  --primary: #000000;
+  --primary-light: #22211f;
+  --primary-disabled: #363435;
+  --primary-lighter: #454344;
+  --secondary: #1d1d1d;
+  --text: #11181c;
   --text-gray: #687076;
-  --border: #f0f3f5;
+  --text-placeholder: #8890a7;
+  --border: #dfe3e6;
   --btn-bg: #ededed;
+  --input-bg: #f1f2f3;
   --background: #f8f8ff;
   --error: #e5484d;
 }
@@ -31,7 +34,7 @@ body {
 }
 
 *::selection {
-  background: var(--primary);
+  background: var(--primary-light);
   color: white;
 }
 
@@ -48,7 +51,7 @@ body {
   padding: 0.5rem;
   border-radius: 0.5rem;
   width: 100%;
-  min-height: 3.5rem;
+  min-height: 2.75rem;
   display: flex;
   gap: 0.75rem;
   color: var(--text);
@@ -59,8 +62,8 @@ body {
   color: var(--text);
   padding: 0.5rem;
   border: 1px solid var(--border);
-  border-radius: 10rem;
   transition: all 0.3s ease;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
 }
 
 .socials-row > a svg {
@@ -68,7 +71,7 @@ body {
 }
 
 .socials-row > a:hover {
-  border: 1px solid var(--primary);
+  background-color: var(--btn-bg);
 }
 
 .form-welcome-row {
@@ -92,9 +95,8 @@ body {
 
 .divider {
   display: flex;
-  white-space: nowrap;
   flex-direction: row;
-  color: var(--text);
+  color: var(--secondary);
   gap: 1rem;
   align-items: center;
 }
@@ -102,7 +104,7 @@ body {
 .divider-line {
   width: 100%;
   height: 1px;
-  background: var(--text);
+  background: var(--secondary);
   opacity: 0.2;
 }
 
@@ -111,8 +113,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   gap: 1rem;
   max-height: 200rem;
   height: 100%;
@@ -146,18 +146,20 @@ body {
 
 .my-form__button {
   background: black;
+  border: 1px solid var(--primary-light);
   color: white;
   white-space: nowrap;
   display: grid;
   place-items: center;
-  margin-top: 1rem;
-  line-height: 3.25rem;
+  margin-top: 1.5rem;
+  line-height: 2.75rem;
   outline: none;
   border: none;
   font-size: 1.125rem;
   cursor: pointer;
   width: 100%;
-  border-radius: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -187,7 +189,6 @@ body {
 .my-form__row {
   display: flex;
   justify-content: center;
-  color: var(--text);
   gap: 1rem;
 }
 
@@ -198,20 +199,17 @@ body {
 }
 
 .text-field input {
-  color: var(--text);
+  color: var(--secondary);
   max-width: 100%;
   width: 100%;
   border: 1px solid var(--border);
   min-height: 3rem;
   letter-spacing: 0.03rem;
   outline: none;
+  background: var(--input-bg);
   transition: 0.25s;
-  border-radius: 10rem;
+  border-radius: 0.5rem;
   text-indent: 1.25rem;
-}
-
-.text-field input::placeholder {
-  color: var(--secondary);
 }
 
 .text-field label {
@@ -236,7 +234,8 @@ body {
 }
 
 .text-field input:focus {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--text);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
 }
 
 /* aside */
@@ -245,14 +244,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  max-height: 80rem;
   border-radius: 2rem;
   background: url("assets/background.jpg") repeat center center;
-  background-position: 55% 50%;
+  background-position: cover;
+  max-height: 90rem;
 }
 
 .info-side .blockquote-wrapper {
-  gap: 1.5rem;
+  gap: 1rem;
   position: relative;
   padding: 1rem;
   max-width: 25rem;
@@ -261,8 +260,33 @@ body {
 }
 
 .info-side .blockquote-wrapper img {
-  margin-top: 0.5rem;
   width: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.info-side .blockquote-wrapper blockquote {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.info-side .author {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.info-side .author img {
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.info-side .author-name {
+  font-weight: 600;
+  color: var(--text);
 }
 
 @media (max-width: 720px) {
